@@ -1,0 +1,72 @@
+\documentclass[doctor]{snuece-bs}
+
+\usepackage{biblatex}
+\addbibresource{10-bibliography.tex}
+
+\title[korean]{AmslerTouch: 노인황반변성 증상의 정량적 자가진단을 지원하는 암슬러 그리드 애플리케이션 설계}
+\title[english]{AmslerTouch: Self-testing Amsler Grid Application for Supporting a Quantitative Report of Age-related Macular Degeneration Symptoms}
+
+
+\author[korean]{신 동 훈}
+\author[english]{DONGHOON SHIN}
+\author[nospace]{신동훈}
+
+
+\advisor{서 종 모}
+
+\submissiondeadline{2021년 6월}
+\examinationdate{2021년 8월}
+
+\gradyear[english]{AUGUST 2022}
+\gradyear[korean]{2022년 8월}
+
+
+\begin{document}
+\renewcommand{\baselinestretch}{1.5}
+
+\selectfont
+
+\begin{abstract}
+	\par
+	Age-related macular degeneration (AMD) is a progressive chronic disease that is led by damage in the macula. Due to its irreversible characteristics and disastrous effects on the patients, a precise diagnosis of the symptoms is extremely important. Yet, paper-based Amsler Grid, the most prevalent testing method, is highly limited in that it requires the indirect report of patients and quantitative reporting is difficult. To address this, I propose AmslerTouch, a touch-based Amsler-testing web app that supports patients to self-report AMD symptoms. Based on the reflection on the proposed system, I also discuss future enhancements.
+	\vfill
+	\begin{minipage}[t][20mm][b]{\textwidth}
+		{\bfseries Keywords}: Age-related Macular Degeneration, Amsler Grid, Healthcare\\
+		{\bfseries Student number}: 2016-16578\\
+	\end{minipage}
+	
+\end{abstract}
+
+\changepage{5mm}{}{}{}{}{}{}{}{-5mm}
+
+\makelists
+
+\input{01-introduction}
+
+\chapter{BODY}
+
+\section{Method}
+This study was built upon the previous works in the field of human-computer interaction (HCI) that dealt with diagnosing AMD symptoms with aids of computing systems. Based on these implications of these approaches and the understanding of frequent symptoms reported by ophthalmologists, I propose our touch-based interactive Amsler grid testing app.
+
+
+\input{02-related-work}
+\input{03-design}
+\input{04-implementation}
+
+\printbibliography
+
+\begin{summary}
+	\par
+	
+	노인 황반변성 (Age-related macular degeneration; AMD)은 황반 내 손상에 의해 야기되는 진행성 만성 질환이다. 치료가 어려운 해당 질병의 특성과 환자에 미치는 만성적인 영향 때문에 AMD는 증상에 대한 정확한 진단이 매우 중요하다. 하지만, 전세계적으로 AMD를 진단하기 위해 가장 널리 사용되는 테스트 방법 중 하나인 종이 기반 Amsler grid는 환자가 간접적으로 증상에 대해 말하는 방식으로 진행되고, 정량적 보고가 어렵다는 점에서 매우 제한적이다. 이를 해결하기 위해, 본 연구에서는 AmslerTouch를 제안한다. AmslerTouch 터치 기반의 Amsler grid 웹 앱으로, 환자가 AMD 증상을 자가 보고할 수 있도록 지원하는 프로그램이다. 제안된 시스템을 바탕으로, 향후 해당 시스템을 발전시킬 수 있는 방안 또한 제언한다.
+	\vfill
+	\begin{minipage}[t][20mm][b]{\textwidth}
+		{\bfseries 주요어}: 노인 황반변성, 암슬러 그리드, 헬스케어\\
+		{\bfseries 학번}: 2016-16578\\
+	\end{minipage}
+\end{summary}
+\acknowledgement{
+	\par
+	I would like to thank all the people for supporting me throughout my undergraduate studies.
+}
+\end{document}
