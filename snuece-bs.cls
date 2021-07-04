@@ -486,7 +486,7 @@
 		\addcontentsline{toc}{chapter}{ABSTRACT}
 	\else
 		\chapter*{초 록}
-		\addcontentsline{toc}{chapter}{Abstract (In Korean)}
+		\addcontentsline{toc}{chapter}{Abstract (Korean)}
 	\fi
     %\setlength{\parindent}{0pt}
     \indent

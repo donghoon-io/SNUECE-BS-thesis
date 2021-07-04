@@ -1,6 +1,14 @@
 \documentclass[doctor]{snuece-bs}
 
 \usepackage{biblatex}
+\usepackage{comment}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
 \addbibresource{10-bibliography.tex}
 
 \title[korean]{AmslerTouch: 노인황반변성 증상의 정량적 자가진단을 지원하는 암슬러 그리드 애플리케이션 설계}
@@ -28,7 +36,7 @@
 
 \begin{abstract}
 	\par
-	Age-related macular degeneration (AMD) is a progressive chronic disease that is led by damage in the macula. Due to its irreversible characteristics and disastrous effects on the patients, a precise diagnosis of the symptoms is extremely important. Yet, paper-based Amsler Grid, the most prevalent testing method, is highly limited in that it requires the indirect report of patients and quantitative reporting is difficult. To address this, I propose AmslerTouch, a touch-based Amsler-testing web app that supports patients to self-report AMD symptoms. Based on the reflection on the proposed system, I also discuss future enhancements.
+	Age-related macular degeneration (AMD) is a progressive chronic disease that is led by damage in the macula. Due to its irreversible characteristics and disastrous effects on the patients, a precise diagnosis of the symptoms is extremely important. Yet, paper-based Amsler Grid, the most prevalent testing method, is highly limited in that it requires the indirect report of patients and quantitative reporting is difficult. To address this, I propose AmslerTouch, a touch-based Amsler-testing web app that supports patients to self-report AMD symptoms. Based on the heuristic evaluation for identifying limitations and gaining insights, I also discuss possible enhancements of my proposed system.
 	\vfill
 	\begin{minipage}[t][20mm][b]{\textwidth}
 		{\bfseries Keywords}: Age-related Macular Degeneration, Amsler Grid, Healthcare\\
@@ -46,19 +54,22 @@
 \chapter{BODY}
 
 \section{Method}
-This study was built upon the previous works in the field of human-computer interaction (HCI) that dealt with diagnosing AMD symptoms with aids of computing systems. Based on these implications of these approaches and the understanding of frequent symptoms reported by ophthalmologists, I propose our touch-based interactive Amsler grid testing app.
+This study was built upon the previous works in the field of medicine and human-computer interaction (HCI) that dealt with diagnosing AMD symptoms with aids of computing systems. Based on the implications of these approaches and the understanding of frequent symptoms reported by ophthalmologists, I propose my touch-based interactive Amsler grid testing app.
 
 
 \input{02-related-work}
 \input{03-design}
 \input{04-implementation}
+\input{05-evaluation}
+%\input{06-discussion}
+\input{07-conclusion}
 
-\printbibliography
+\printbibliography[heading=bibintoc,title={References}]
 
 \begin{summary}
 	\par
 	
-	노인 황반변성 (Age-related macular degeneration; AMD)은 황반 내 손상에 의해 야기되는 진행성 만성 질환이다. 치료가 어려운 해당 질병의 특성과 환자에 미치는 만성적인 영향 때문에 AMD는 증상에 대한 정확한 진단이 매우 중요하다. 하지만, 전세계적으로 AMD를 진단하기 위해 가장 널리 사용되는 테스트 방법 중 하나인 종이 기반 Amsler grid는 환자가 간접적으로 증상에 대해 말하는 방식으로 진행되고, 정량적 보고가 어렵다는 점에서 매우 제한적이다. 이를 해결하기 위해, 본 연구에서는 AmslerTouch를 제안한다. AmslerTouch 터치 기반의 Amsler grid 웹 앱으로, 환자가 AMD 증상을 자가 보고할 수 있도록 지원하는 프로그램이다. 제안된 시스템을 바탕으로, 향후 해당 시스템을 발전시킬 수 있는 방안 또한 제언한다.
+	노인 황반변성 (Age-related macular degeneration; AMD)은 황반 내 손상에 의해 야기되는 진행성 만성 질환이다. 치료가 어려운 해당 질병의 특성과 환자에 미치는 만성적인 영향 때문에 AMD는 증상에 대한 정확한 진단이 매우 중요하다. 하지만, 전세계적으로 AMD를 진단하기 위해 가장 널리 사용되는 테스트 방법 중 하나인 종이 기반 Amsler grid는 환자가 간접적으로 증상에 대해 말하는 방식으로 진행되고, 정량적 보고가 어렵다는 점에서 매우 제한적이다. 이를 해결하기 위해, 본 연구에서는 AmslerTouch를 제안한다. AmslerTouch 터치 기반의 Amsler grid 웹 앱으로, 환자가 AMD 증상을 자가 보고할 수 있도록 지원하는 프로그램이다. 제안된 시스템을 바탕으로 진행한 휴리스틱 평가 방법론을 통해, 향후 해당 시스템을 발전시킬 수 있는 방안 또한 제언한다.
 	\vfill
 	\begin{minipage}[t][20mm][b]{\textwidth}
 		{\bfseries 주요어}: 노인 황반변성, 암슬러 그리드, 헬스케어\\
@@ -67,6 +78,6 @@ This study was built upon the previous works in the field of human-computer inte
 \end{summary}
 \acknowledgement{
 	\par
-	I would like to thank all the people for supporting me throughout my undergraduate studies.
+	I would like to thank all the people for supporting me throughout my undergraduate studies. Plus, I thank my advisor professor Jongmo Seo for allowing me to write my thesis in the field of HCI.
 }
 \end{document}

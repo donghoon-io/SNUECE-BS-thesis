@@ -1,0 +1,126 @@
+\section{Evaluation}
+
+In order to evaluate the usability of AmslerTouch, I conducted a heuristic evaluation based on the pre-defined questionnaires from the literature review.
+
+\subsection{Method}
+
+Heuristic evaluation, which I decided to run for evaluating my interface, is an evaluation method that enables informal, internal assessment on the usability of interfaces~\cite{nielsen1990heuristic}. Admittedly, there are several methods that may enable me to better identify real-world usability issues, such as lab experiment, deployment study, and clinical trial. However, due to the limited resource and difficulty of recruiting participants, I considered that heuristic evaluation is the most feasible method for the assessment.
+
+%In the process of heuristic evaluation, evaluator(s) try using the interface and evaluate it based on each of the criteria offered by the pre-defined questionnaires. Here, it is important to select the proper criteria, since the suitable criteria varies over domain whose efficiency is proven often empirically after certain amount of time. For example, there are several widely-used heuristics available in a medical application area, such as patient safety over medical devices~\cite{zhang2003using} and tele-medicine system~\cite{tang2006applying}. Among these, I decided to follow the heuristics of
+
+In the process of heuristic evaluation, evaluator(s) try using the interface and evaluate it based on the pre-defined checklist. Here, since the crucial factors of usability might vary over domains, some specialized heuristics are suggested to be applied to a specific domain, whose efficiency is later proven empirically after a certain amount of time. For example, several widely-used heuristics have been presented in the field of a medical application area, such as patient safety over medical devices~\cite{zhang2003using} and tele-medicine system~\cite{tang2006applying}.
+
+Still, I decided to evaluate AmslerTouch based on the original checklist suggested by Nielsen~\cite{nielsen1994heuristic}, in that (i) it has long been proved efficient across various domains of interaction design and (ii) little or no specialized checklist exists for our domain. Table~\ref{tab:heuristics}, ~\ref{tab:heuristics_severity}, and~\ref{tab:heuristics_ease} indicate the checklist, severity rank, and ease of fixing rank for my heuristic evaluation, respectively. With these criteria, I conducted a heuristic evaluation which lasted about 2 hours.
+
+\begin{table}[h]
+    \centering
+    \caption{Checklist of heuristic evaluation}
+    \vspace{0.2cm}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{\small{Number}} & \textbf{\small{Heuristics}}\\
+        \hline
+        \hline \small{\#1} & \small{Visibility of system status}\\
+        \hline
+        \small{\#2} & \small{Match between system and real world}\\
+        \hline
+        \small{\#3} & \small{User control and freedom}\\
+        \hline
+        \small{\#4} & \small{Consistency and standards}\\
+        \hline
+        \small{\#5} & \small{Error prevention}\\
+        \hline
+        \small{\#6} & \small{Recognition rather than recall}\\
+        \hline
+        \small{\#7} & \small{Flexibility and efficiency of use}\\
+        \hline
+        \small{\#8} & \small{Aesthetic and minimalist design}\\
+        \hline
+        \small{\#9} & \small{Help users recognize, diagnose, recover from errors}\\
+        \hline
+        \small{\#10} & \small{Help and documentation}\\
+        \hline
+    \end{tabular}
+    \label{tab:heuristics}
+\end{table}
+
+\begin{table}[]
+    \centering
+    \caption{Rank of severity}
+    \vspace{0.2cm}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{\small{Rank}} & \textbf{\small{Definition}}\\
+        \hline
+        \hline \small{0} & \specialcell{\small{Violates a heuristic but doesn’t seem to be a usability problem.}}\\
+        \hline
+        \small{1} & \specialcell{\small{Superficial usability problem: may be easily overcome by user}\\\small{or occurs extremely infrequently. Does not need to be fixed}\\\small{for next release unless extra time is available.}}\\
+        \hline
+        \small{2} & \specialcell{\small{Minor usability problem: may occur more frequently}\\\small{or be more difficult to overcome. Fixing this should be given}\\\small{low priority for next release.}}\\
+        \hline
+        \small{3} & \specialcell{\small{Major usability problem: occurs frequently and persistently}\\\small{or users may be unable or unaware of how to fix the problem.}\\\small{Important to fix, so should be given high priority.}}\\
+        \hline
+        \small{4} & \specialcell{\small{Usability catastrophe: Seriously impairs use of product}\\\small{and cannot be overcome by users. Imperative to fix this}\\\small{before product can be released.}}\\
+        \hline
+    \end{tabular}
+    \label{tab:heuristics_severity}
+\end{table}
+
+\begin{table}[]
+    \centering
+    \caption{Rank of ease of fixing}
+    \vspace{0.2cm}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{\small{Rank}} & \textbf{\small{Definition}}\\
+        \hline
+        \hline \small{0} & \specialcell{\small{Problem would be extremely easy to fix.}}\\
+        \hline
+        \small{1} & \specialcell{\small{Problem would be easy to fix.}}\\
+        \hline
+        \small{2} & \specialcell{\small{Problem would require some effort to fix.}}\\
+        \hline
+        \small{3} & \specialcell{\small{Usability problem would be difficult to fix.}}\\
+        \hline
+    \end{tabular}
+    \label{tab:heuristics_ease}
+\end{table}
+
+\subsection{Result}
+
+In this section, I describe the result of heuristic evaluation, which is described in Table~\ref{tab:heuristics_result}. Specifically, based on the criteria, I sorted the identified issues by rank and discuss four top issues.
+
+\subsubsection{Insufficient description exists for how the user may initiate using the system}
+
+Even though the interface of AmslerTouch is intuitive, it was hard to initiate using the system. Specifically, with only a grid and a set of buttons available on the screen, users may not be able to fully understand the way of manipulating the objects. Thus, I considered that it is necessary to add some design elements that help user onboard successfully (e.g., additional tooltips, pop-up).
+
+\subsubsection{The text on tooltip view is too small to recognize}
+The tooltip view was designed to induce users to keep a specific distance away from the screen. Yet, I found that the text was too small to read successfully, requiring bigger text for users to fully perceive. In addition, considering the user group where users may face issues regarding the vision, other physical methods may also be beneficial to inducing such a behavior. For example, by implementing a vibrotactile feature from the wearable devices, users may get feedback from the system to keep moving away from the screen until the user reaches a certain amount of distance.
+
+\subsubsection{There is no perceivable distinction between \textit{Clear} and \textit{Undo} button}
+
+In AmslerTouch, \textit{Clear} button indicates the removal of all markups, whereas \textit{Undo} button cancels only the previous action. Since \textit{Clear} action is destructive, it is important for users to fully understand the difference between the two buttons. However, in my interface, it was quite difficult to perceive the difference between the two buttons at first glance. Thus, it is required to clarify the wordings of each button, while giving users additional information with tooltips or popups.
+
+\subsubsection{No detailed guideline exists on how the drawing algorithm works}
+
+Although we designed a usable algorithm for determining user's drawing between circle and pen drawing, there is no sufficient clue or metaphor that makes users perceive or infer it. Thus, the system should be revised to offer users enough explanations along with the idea of which tool may be beneficial over the other in a specific situation.
+
+\begin{table}[]
+    \centering
+    \caption{Result of heuristic evaluation}
+    \vspace{0.2cm}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{\small{Issue}} & \textbf{\small{Severity}} & \textbf{\small{Ease of Fixing}} & \textbf{\small{Heuristics}}\\
+        \hline
+        \hline \specialcell{\small{Insufficient description exists for how the}\\\small{user may initiate using the system}} & \small{3} & \small{1} & \small{\#10}\\
+        \hline \specialcell{\small{The text on tooltip view is too small}\\\small{to recognize}} & \small{3} & \small{1} & \small{\#1, \#2}\\
+        \hline \specialcell{\small{There is no perceivable distinction}\\\small{between \textit{Clear} and \textit{Undo} button}} & \small{2} & \small{1} & \small{\#1, \#6, \#10}\\
+        \hline \specialcell{\small{No detailed guideline exists on how}\\\small{the drawing algorithm works}} & \small{2} & \small{2} & \small{\#9, \#10}\\
+        \hline \specialcell{\small{It is difficult to pick a color for markups;}\\\small{lack of scaffolded options}} & \small{2} & \small{3} & \small{\#3, \#7}\\
+        \hline \specialcell{\small{Tooltip does not induce user to stay}\\\small{away for a designated amount of distance}} & \small{3} & \small{3} & \small{\#1, \#9, \#10}\\
+        \hline \specialcell{\small{User cannot setup directory for}\\\small{downloading the markup}} & \small{1} & \small{3} & \small{\#7}\\
+        \hline
+    \end{tabular}
+    \label{tab:heuristics_result}
+\end{table}
